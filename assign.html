@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors Practice</title>
+    <style>
+        /* Navigation Bar */
+        nav a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+        nav a:first-child {
+            color: blue; /* First link special color */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Hover underline */
+        }
+        nav a:active {
+            color: red; /* Active link color */
+        }
+
+        /* List Styles */
+        ul li:last-child {
+            color: red;
+            font-weight: bold;
+        }
+        ul li:nth-child(even) {
+            background-color: lightgray;
+        }
+        ul li:nth-child(odd) {
+            background-color: lightyellow;
+        }
+        ul li:not(:nth-child(2)) {
+            border-left: 3px solid green;
+        }
+
+        /* Form Styles */
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+        input:valid {
+            border: 2px solid green;
+        }
+        input:invalid {
+            border: 2px solid red;
+        }
+        input[type="checkbox"]:checked ~ * {
+            background-color: black;
+            color: white;
+        }
+
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        tr:first-child {
+            background-color: lightblue;
+        }
+        td:nth-child(odd) {
+            background-color: lightpink;
+        }
+        td:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- List Section -->
+    <h2>My List</h2>
+    <ul>
+        <li>Item One</li>
+        <li>Item Two</li>
+        <li>Item Three</li>
+        <li>Item Four</li>
+        <li>Item Five</li>
+    </ul>
+
+    <!-- Form Section -->
+    <h2>Sign Up</h2>
+    <form>
+        <label>Name:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <label>Dark Mode</label>
+        <input type="checkbox"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Table Section -->
+    <h2>Sample Table</h2>
+    <table>
+        <tr>
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>Col 3</th>
+        </tr>
+        <tr>
+            <td>Row1-Col1</td>
+            <td>Row1-Col2</td>
+            <td>Row1-Col3</td>
+        </tr>
+        <tr>
+            <td>Row2-Col1</td>
+            <td>Row2-Col2</td>
+            <td>Row2-Col3</td>
+        </tr>
+    </table>
+
+</body>
+</html>
